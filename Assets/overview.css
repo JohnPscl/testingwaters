@@ -245,7 +245,8 @@ Second NavBar and frame
 
 
 .feature-container {
-    display: flex;
+    position: relative;
+    min-height: 1200px; /* Ensure enough space */
 }
 .navbar {
     transition: top 0.3s;
