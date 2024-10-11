@@ -20,24 +20,24 @@
     <div class="container">
         
         <!--NavBar-->
-        <section class="nav-container">
-            <nav>
-                <div class="logo-container">
+        <div class="nav-container">
+            <nav class = main-nav>
+                <a href="#intro" class="logo-container">
                     <img src="./Assets/Logo/engineering logo.png" alt="Logo" class="logo">
-                </div>
+                </a>
                 
                 <ul class="nav-links">
-                    <li><a href="#features">Features</a></li>
+                    <li><a href="#store">Features</a></li>
                     <li><a href="#customer" >Customer</a></li>
                     <li><a href="#team" >Team</a></li>
                     <li><a href="#contactus" >Contact Us</a></li>
                 </ul>
                 <button class="sign-button" href="#">Sign In</button>
             </nav>
-        </section>
+        </div>
 
         <!--IntroSection-->
-        <section class="intro-container">
+        <section id="intro" class="intro-container">
             <div class="credentials">
                 <p>Keep your credentials<br>
                     updated and safe.</p>
@@ -50,8 +50,8 @@
             <button class="sign-inn-button" href="#">Sign In</button>
         </section>
 
-        <!--Store-->
-        <section class="feature-container">
+        <!--Features-->
+        <div class="feature-container">
             <nav class="navbar" >
                 <ul class="nav-items">
                 <li><a href="#store" >Store</a></li>
@@ -60,16 +60,70 @@
                 <li><a href="#security">Security</a></li>
                 </ul>
             </nav>
-    
-            <section>
-                <div class="store1">
-                    <p>Storing certificates made simple</p>
-                </div>
-                <div class="store2">Effortless and secure management for faculty credentials.<br>
-                        Store, track, and access your certificates with ease.</div>
+
+            <!--Store-->
+
+            <section id="store" class = "container-features">
+                <article>
+                    <h1 class="features-header">
+                    Storing certificates made simple
+                    </h1>
+                    <p class="features-descript">
+                    Effortless and secure management for faculty credentials.<br>
+                    Store, track, and access your certificates with ease.
+                    <p>
                 <script src="./Assets/faculty.js"></script>
+                </article>
             </section>
-        </section>
+            
+            <!--Manage-->
+
+            <section id="manage" class = "container-features">
+                <article>
+                    <h1 class="features-header">
+                    Keep everything in order
+                    </h1>
+                    <p class="features-descript">
+                    Control your documents with ease—rename, delete, and review <br> 
+                    details to keep everything organized and up to date.
+
+                    <p>
+                <script src="./Assets/faculty.js"></script>
+                </article>
+            </section>
+
+            <!--Visibility-->
+
+            <section id="visibility" class = "container-features">
+                <article>
+                    <h1 class="features-header">
+                    Streamline team oversight
+                    </h1>
+                    <p class="features-descript">
+                    Department chairs and deans gain visibility into faculty certifications, <br>
+                    ensuring transparency and collaboration across departments.
+                    <p>
+                <script src="./Assets/faculty.js"></script>
+                </article>
+            </section>
+
+            <!--Security--> 
+
+            <section id="security" class = "container-features">
+                <article>
+                    <h1 class="features-header">
+                        Data protection you can trust
+                    </h1>
+                    <p class="features-descript">
+                        Your certificates are safeguarded with top-tier security protocols, <br>
+                        ensuring that only authorized users have access.
+                    <p>
+                <script src="./Assets/faculty.js"></script>
+                </article>
+            </section>
+        </div>
+
+        <!--Customer-->
 
     
     </div>
