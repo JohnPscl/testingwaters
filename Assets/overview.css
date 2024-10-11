@@ -43,6 +43,9 @@ Variables
     --fs-6: 14px;
     --fs-7: 13px;
     --fs-8: 11px;
+    /*Additional FS*/
+    --fs-9: 44px;
+    --fs-10: 24px;
     
     /* font-weight */
     --fw-300: 300;
@@ -56,15 +59,23 @@ Variables
 Reused Styles
 */
 
+
 html {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    scroll-padding-top: 10rem;
 }
 
-    body {
+body {
         overflow-x: hidden;
         background-color: var(--peach-puff);
         margin: 0;
         padding:0;
+        width: 100%;
+        box-sizing: border-box;
         font-family: var(--ff-poppins);
         letter-spacing: 1px;
         background-repeat: no-repeat;
@@ -73,10 +84,7 @@ html {
         display: flex ;
         scroll-behavior: smooth;
         
-    }
-
-
-
+}
 
 .container
 {
@@ -95,7 +103,7 @@ NavBar
     width: 100vw;
 }
 
-nav {
+.main-nav {
     height: 4.5rem;
     width: 100vw;
     background-color: var(--peach-puff);
@@ -204,21 +212,23 @@ Intro
     position: absolute;
     display: flex;
     margin-left: 130px;
-    margin-top: 150px;
+    margin-top: 100px;
     font-size: 50px;
     font-family: var(--ff-poppins);
     font-weight: var(--fw-600);
+    
     
 }
 .intro-descript{
     position: absolute;
     display: flex;
     margin-left: 130px;
-    margin-top: 340px;
+    margin-top: 290px;
     font-size: 20px;
     font-weight: thin;
     font-family: var(--ff-poppins);
     font-weight: var(--fw-300);
+    color: var(--light-gray);
 }
 .sign-inn-button{
     display: flex;
@@ -231,7 +241,7 @@ Intro
     font-weight: var(--fw-300);
     cursor: pointer;
     margin-left: 130px;
-    margin-top: 450px;
+    margin-top: 400px;
 }
 .sign-inn-button:hover {
     background-color: var(--eerie-black-2);
@@ -245,14 +255,16 @@ Second NavBar and frame
 
 
 .feature-container {
+    width: 100vw;
     position: relative;
-    min-height: 1200px; /* Ensure enough space */
+    min-height: 3480px;
 }
 .navbar {
     transition: top 0.3s;
     border-radius: 20px;   
     position: sticky;
     display: flex;
+    box-shadow: 0 3px 20px rgba(36, 35, 35, 0.2);
     justify-content: center;
     width: 45%; /* Fixed width */
     background-color: #fff6e8; /* Light brown background */
@@ -280,21 +292,20 @@ Second NavBar and frame
   }
   
   .nav-items a {
-    color: var(--jet);
+    color: var(--light-gray);
     text-decoration: none;
-     /* Smaller padding */
+     /* Smaller padding */ 
     font-family: var(--ff-poppins);
     font-size: var(--fs-2);
     width: 100%; 
     text-align: center; 
   }
-  
-  .nav-items a.active {
-    font-weight: bold;
-  }
+
   
   .nav-items a:hover {
     text-decoration: underline;
+    color: var(--jet);
+
   }
 
   .features{
@@ -306,41 +317,32 @@ Second NavBar and frame
   
 /*store & Feature section*/
 
-.store-container {
-    display: flex;
+.container-features {
     height: 870px;
+    width: 100vw;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
 }
 
-.store{
-    position: absolute;
-    display: flex;
-    margin-left: 300px;
-    margin-top: 900px;
-    top: 30px;
+.features-header{
+    margin: 30px;
     font-size: 50px;
     font-weight: bold;
-    justify-content: center;
-    align-items: center;;
+    text-align: center;
 }
-.store1{
-    top: 30px;
-    font-size: 50px;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;;
-}
-.store2{
-    position: absolute;
+.features-descript{
     display: flex;
-    margin-left: 360px;
-    margin-top: 1250px;
     font-size: 30px;
-    font-family: Poppins-ExtraLight;
+    margin-top: -30px;
+    font-family: var(--ff-poppins);
+    font-size: var(--fs-10);
     justify-content: center;
-    align-items: center;;
-    color: #6d6d6c;
+    text-align: center;
+    color: var(--light-gray);
 }
+
 
 
 
