@@ -316,7 +316,6 @@ Second NavBar and frame
 }
   
 /*store & Feature section*/
-
 .container-features {
     height: 870px;
     width: 100vw;
@@ -326,7 +325,7 @@ Second NavBar and frame
     justify-content: space-between;
 }
 
-.features-header{
+.features-header {
     position: relative;
     margin-left: auto;
     margin: 30px;
@@ -334,7 +333,8 @@ Second NavBar and frame
     font-weight: bold;
     text-align: center;
 }
-.features-descript{
+
+.features-descript {
     position: relative;
     display: flex;
     font-size: 30px;
@@ -344,59 +344,64 @@ Second NavBar and frame
     justify-content: center;
     text-align: center;
     color: var(--light-gray);
+    margin-bottom: 100px;
 }
 
 
-
-
-.vertical-line.expanded {
-    height: 50px; /* Height after being clicked */
-}
-.feature1 {
+.feature1, .feature2, .feature3 {
+    display: flex;
+    align-items: flex-start; /* Align items vertically at the top */
     margin-left: 150px;
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    
+    margin-bottom: 20px; /* Space between each feature */
+    position: relative; /* To contain the vertical line expansion */
 }
 
 .vertical-line {
-    width: 3px; /* Line thickness */
-    height: 20px; /* Initial height of the vertical line */
-    background-color: black; /* Color of the line */
-    transition: height 0.3s ease; /* Smooth transition for height change */
+    width: 3px;
+    height: 40px; /* Initial height of the line */
+    background-color: black;
+    transition: height 0.5s ease-in-out; /* Smooth transition for height */
+    margin-right: 10px;
 }
 
-.text {
-    display: none; /* Initially hide text */
-    margin-top: 10px; /* Space above text */
+.vertical-line.expanded {
+    height: 120px; /* Expanded height when button is clicked */
 }
 
-.text.visible {
-    display: block; /* Show text when visible class is added */
+.content {
+    display: flex;
+    flex-direction: column; /* Stack button and text vertically */
+    align-items: flex-start;
 }
 
 .buttonStyle {
-    cursor: pointer; /* Change cursor to pointer for buttons */
-    padding: 10px 15px; /* Add some padding for the buttons */
-    background-color:transparent; /* Button background color */
-    color: rgb(17, 17, 17); /* Button text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: rgb(17, 17, 17);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: margin-top 0.5s ease; /* Smooth transition for button movement */
 }
 
-.feature2 {
-    margin-left: 150px;
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Center items vertically */
-  
+.text {
+    opacity: 0;
+    max-height: 0; /* Start with collapsed height */
+    overflow: hidden;
+    margin-left: 15px;
+    font-size: 16px;
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Smooth text transition */
+    margin-top: 5px;
 }
-.feature3 {
-    margin-left: 150px;
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Center items vertically */
-   
+
+.text.visible {
+    opacity: 1;
+    max-height: 150px; /* Expand to fit the text */
 }
+
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {

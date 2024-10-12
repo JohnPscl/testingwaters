@@ -29,32 +29,42 @@ document.querySelectorAll('.vertical-line').forEach(function(line) {
     });
 });
 
+// Function to hide all text and reset all vertical lines
 function hideAllText() {
     document.querySelectorAll('.text').forEach(function(el) {
-        el.classList.remove('visible');
+        el.classList.remove('visible'); // Hide all text
+    });
+    document.querySelectorAll('.vertical-line').forEach(function(line) {
+        line.style.height = '40px'; // Reset all lines to default height
     });
 }
 
 function showText1() {
-    hideAllText();
-    document.querySelector('.text1').classList.add('visible');
-    document.querySelector('.line1').style.height = '100px'; // Expand first line
-    document.querySelector('.line2').style.height = '40px'; // Reset other lines
-    document.querySelector('.line3').style.height = '40px';
+    hideAllText(); // Hide other texts and reset all lines
+    
+    const line1 = document.querySelector('.feature1 .vertical-line');
+    const text1 = document.querySelector('.text1');
+    
+    line1.style.height = '120px'; // Expand the line for feature 1
+    text1.classList.add('visible'); // Show text for feature 1
 }
 
 function showText2() {
-    hideAllText();
-    document.querySelector('.text2').classList.add('visible');
-    document.querySelector('.line1').style.height = '40px'; // Reset first line
-    document.querySelector('.line2').style.height = '100px'; // Expand second line
-    document.querySelector('.line3').style.height = '40px';
+    hideAllText(); // Hide other texts and reset all lines
+
+    const line2 = document.querySelector('.feature2 .vertical-line');
+    const text2 = document.querySelector('.text2');
+    
+    line2.style.height = '100px'; // Expand the line for feature 2
+    text2.classList.add('visible'); // Show text for feature 2
 }
 
 function showText3() {
-    hideAllText();
-    document.querySelector('.text3').classList.add('visible');
-    document.querySelector('.line1').style.height = '40px'; // Reset first line
-    document.querySelector('.line2').style.height = '40px'; // Reset second line
-    document.querySelector('.line3').style.height = '100px'; // Expand third line
+    hideAllText(); // Hide other texts and reset all lines
+
+    const line3 = document.querySelector('.feature3 .vertical-line');
+    const text3 = document.querySelector('.text3');
+    
+    line3.style.height = '120px'; // Expand the line for feature 3
+    text3.classList.add('visible'); // Show text for feature 3
 }
