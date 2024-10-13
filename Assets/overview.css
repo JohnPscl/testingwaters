@@ -257,7 +257,6 @@ Second NavBar and frame
 .feature-container {
     width: 100vw;
     position: relative;
-    min-height: 3480px;
 }
 .navbar {
     transition: top 0.3s;
@@ -318,7 +317,7 @@ Second NavBar and frame
 /*store & Feature section*/
 
 .container-features {
-    height: 870px;
+    height: 500px;
     width: 100vw;
     box-sizing: border-box;
     margin: 0;
@@ -333,6 +332,99 @@ Second NavBar and frame
     text-align: center;
 }
 .features-descript{
+    display: flex;
+    font-size: 30px;
+    margin-top: -30px;
+    font-family: var(--ff-poppins);
+    font-size: var(--fs-10);
+    justify-content: center;
+    text-align: center;
+    color: var(--light-gray);
+}
+
+/*Feature Accordion Effect*/
+
+.feature1, .feature2, .feature3 {
+    display: flex;
+    align-items: flex-start; /* Align items vertically at the top */
+    margin-left: 90px;
+    margin-bottom: 5px; /* Space between each feature */
+     /* To contain the vertical line expansion */
+}
+
+.feature-right {
+    margin-left: 900px;
+}
+
+.vertical-line {
+    width: 3px;
+    height: 40px; /* Initial height of the line */
+    background-color: var(--jet);
+    transition: height 0.5s ease-in-out; /* Smooth transition for height */
+    margin-right: 10px;
+}
+
+.vertical-line.expanded {
+    height: 100px; /* Expanded height when button is clicked */
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Stack button and text vertically */
+    align-items: flex-start;
+}
+
+.buttonStyle {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: var(--jet);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: var(--ff-poppins);
+    font-weight: var(--fw-600);
+    transition: margin-top 0.5s ease; /* Smooth transition for button movement */
+}
+
+.text {
+    opacity: 0;
+    max-height: 0; /* Start with collapsed height */
+    overflow: hidden;
+    margin-left: 15px;
+    font-size: 16px;
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Smooth text transition */
+    margin-top: 5px;
+    color: var(--light-gray);
+}
+
+.text.visible {
+    opacity: 1;
+    max-height: 150px; /* Expand to fit the text */
+    color: var(--light-gray);
+}
+
+/*
+Customer Section
+*/
+.container-customer {
+    height: 560px;
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    margin-top: 105px;
+}
+
+.customer-header {
+    margin: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.customer-descript {
     display: flex;
     font-size: 30px;
     margin-top: -30px;
