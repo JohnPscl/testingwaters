@@ -46,6 +46,8 @@ Variables
     /*Additional FS*/
     --fs-9: 44px;
     --fs-10: 24px;
+    --fs-11: 60px;
+    --fs-12: 25px;
     
     /* font-weight */
     --fw-300: 300;
@@ -80,10 +82,14 @@ body {
         letter-spacing: 1px;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 5000px;
+        height: 10000px;
         display: flex ;
         scroll-behavior: smooth;
         
+}
+
+section {
+    width: 100vw;
 }
 
 .container
@@ -348,7 +354,7 @@ Second NavBar and frame
     display: flex;
     align-items: flex-start; /* Align items vertically at the top */
     margin-left: 90px;
-    margin-bottom: 5px; /* Space between each feature */
+    margin-bottom: 10px; /* Space between each feature */
      /* To contain the vertical line expansion */
 }
 
@@ -365,7 +371,7 @@ Second NavBar and frame
 }
 
 .vertical-line.expanded {
-    height: 100px; /* Expanded height when button is clicked */
+    height: 120px; /* Expanded height when button is clicked */
 }
 
 .content {
@@ -414,7 +420,14 @@ Customer Section
     margin: 0;
     padding: 0;
     justify-content: space-between;
+    display: flex;
     margin-top: 105px;
+}
+
+.customer-text-container {
+    margin-left: 60px;
+    height: 560px;
+    width: 730px;
 }
 
 .customer-header {
@@ -431,14 +444,120 @@ Customer Section
     font-family: var(--ff-poppins);
     font-size: var(--fs-10);
     text-align: justify;
-    text-align: left;
     margin-left: 30px;
     color: var(--light-gray);
 }
-.customer-text-container {
+
+
+.customer-image-container {
     margin-left: 60px;
+    height: 90%;
+    width: 40%;
+}
+
+.customer1-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+/*
+Team Section
+*/
+
+/*Team Header*/
+
+.team-header {
+    height: 200px;
+    width: 100vw;
+    margin-top: 30px;
+}
+
+.team-intro {
+    font-family: var(--ff-poppins);
+    text-align: center;
+}
+
+.meet-text {
+    font-weight: var(--fw-300);
+    font-size: var(--fs-9);
+}
+
+.team-text {
+    font-size: var(--fs-11);
+}
+
+/*The Team*/
+
+.container-team {
+    height: 1000px;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+/*Left Side*/
+
+.text-team-container-left {
     height: 560px;
-    width: 800px;
+    width: 60%;
+    padding: 50px;
+    font-family: var(--ff-poppins);
+    color: var(--jet);
+}
+
+.text-team-name-left {
+    font-weight: var(--fw-600);
+    font-size: var(--fs-11);
+    text-align: left;
+    margin-top: -20px;
+    margin-left: 0px;
+}
+
+.text-team-position-left {
+    margin-left: 0px;
+    margin-top: -100px;
+    font-size: var(--fs-12);
+    font-weight: var(--fw-400);
+    font-style: italic;
+}
+
+.text-team-descript-left {
+    margin-top: -5px;
+    margin-left: 0px;
+    text-align: justify;
+    font-size: var(--fs-2);
+}
+
+/*Right Side*/
+
+
+/*JP*/
+
+.jp-container{
+    display: flex;
+    width: 100%;
+}
+
+.project-head-container {
+    height: 90%;
+    width: 400px;
+}
+
+.project-head-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin-left: 60px;
+    filter: grayscale(100%);
 }
 
 
@@ -446,7 +565,7 @@ Customer Section
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    nav {
+    .nav {
         flex-direction: column;
         height: auto;
         padding: 1rem 0;
